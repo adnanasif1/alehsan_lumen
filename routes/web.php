@@ -15,3 +15,12 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+$router->group(['prefix' => 'api'], function () use ($router) {
+
+    // SaleItems
+  $router->get('saleitems',  ['uses' => 'SaleItemController@list']);
+  $router->get('saleitems/{id}', ['uses' => 'SaleItemController@show']);
+  $router->post('saleitems', ['uses' => 'SaleItemController@create']);
+  $router->delete('saleitems/{id}', ['uses' => 'SaleItemController@delete']);
+  $router->put('saleitems/{id}', ['uses' => 'SaleItemController@update']);
+});
