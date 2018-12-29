@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Sale extends Model
+class SaleItem extends Model
 {
 
     /**
@@ -13,7 +13,7 @@ class Sale extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'github', 'twitter', 'location', 'latest_article_published'
+        'itemname', 'default', 'status', 'ordering'
     ];
 
     /**

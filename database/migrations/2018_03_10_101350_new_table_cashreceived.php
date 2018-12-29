@@ -13,7 +13,7 @@ class NewTableCashreceived extends Migration
      */
     public function up()
     {
-        Schema::create('cashreceived', function (Blueprint $table) {
+        Schema::create('cash_received', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('customerid');
             $table->unsignedMediumInteger('cashin');
@@ -31,6 +31,6 @@ class NewTableCashreceived extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cashreceived');
+        Schema::dropIfExists('cash_received');
     }
 }

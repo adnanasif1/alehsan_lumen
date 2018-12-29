@@ -13,7 +13,7 @@ class NewTableAddressbook extends Migration
      */
     public function up()
     {
-        Schema::create('phonebook', function (Blueprint $table) {
+        Schema::create('phone_book', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 40);
             $table->string('mobile', 20);
@@ -31,6 +31,6 @@ class NewTableAddressbook extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('phonebook');
+        Schema::dropIfExists('phone_book');
     }
 }

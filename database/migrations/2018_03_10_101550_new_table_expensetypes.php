@@ -13,9 +13,9 @@ class NewTableExpensetypes extends Migration
      */
     public function up()
     {
-        Schema::create('expensetypes', function (Blueprint $table) {
+        Schema::create('expense_types', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('itemname', 35);
+            $table->string('name', 35);
             $table->unsignedInteger('ordering');
             $table->boolean('default');
             $table->boolean('status');
@@ -30,6 +30,6 @@ class NewTableExpensetypes extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('expensetypes');
+        Schema::dropIfExists('expense_types');
     }
 }

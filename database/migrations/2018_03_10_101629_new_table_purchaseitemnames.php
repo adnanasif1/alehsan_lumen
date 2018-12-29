@@ -13,9 +13,9 @@ class NewTablePurchaseitemnames extends Migration
      */
     public function up()
     {
-        Schema::create('purchaseitems', function (Blueprint $table) {
+        Schema::create('purchase_items', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('itemname', 35);
+            $table->string('name', 35);
             $table->unsignedInteger('ordering');
             $table->boolean('default');
             $table->boolean('status');
@@ -30,6 +30,6 @@ class NewTablePurchaseitemnames extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('purchaseitems');
+        Schema::dropIfExists('purchase_items');
     }
 }

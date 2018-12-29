@@ -13,7 +13,7 @@ class NewTableAccountreceiveables extends Migration
      */
     public function up()
     {
-        Schema::create('accountreceiveables', function (Blueprint $table) {
+        Schema::create('account_receiveables', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('customerid');
             $table->unsignedBigInteger('totalsale')->default(0);
@@ -32,6 +32,6 @@ class NewTableAccountreceiveables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('accountreceiveables');
+        Schema::dropIfExists('account_receiveables');
     }
 }

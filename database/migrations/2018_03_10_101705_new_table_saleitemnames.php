@@ -13,9 +13,9 @@ class NewTableSaleitemnames extends Migration
      */
     public function up()
     {
-        Schema::create('saleitems', function (Blueprint $table) {
+        Schema::create('sale_items', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('itemname', 35);
+            $table->string('name', 35);
             $table->unsignedInteger('ordering');
             $table->boolean('default');
             $table->boolean('status');
@@ -30,6 +30,6 @@ class NewTableSaleitemnames extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('saleitems');    
+        Schema::dropIfExists('sale_items');    
     }
 }
