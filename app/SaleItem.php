@@ -13,7 +13,7 @@ class SaleItem extends Model
      * @var array
      */
     protected $fillable = [
-        'itemname', 'default', 'status', 'ordering'
+        'name', 'default' ,'status', 'ordering'
     ];
 
     /**
